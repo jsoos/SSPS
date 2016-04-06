@@ -36,7 +36,10 @@ namespace SSPS.VO
             this.Name = Name;
             this.Supplementations = Supplementations;
         }
-
+        /// <summary>
+        /// Generate instances of all posible classes
+        /// </summary>
+        /// <returns>All posible classes</returns>
         public static List<SchoolClass> GetAllClasses()
         {
             var ret = new List<SchoolClass>(17);

@@ -4,6 +4,7 @@ using System.Linq;
 using SSPS.VO;
 using System.Threading.Tasks;
 using Portable.Text;
+using HtmlAgilityPack;
 
 namespace SSPS.BO
 {
@@ -13,9 +14,10 @@ namespace SSPS.BO
         /// Async method which get all posible data for <see cref="SchoolClass"/>
         /// </summary>
         /// <returns>Return listed <see cref="SchoolClass"/></returns>
+        /// TODO: Exception comments
         public async static Task<List<SchoolClass>> List()
         {
-            HtmlAgilityPack.HtmlWeb web = new HtmlAgilityPack.HtmlWeb();
+            HtmlWeb web = new HtmlWeb();
             var doc = await web.LoadFromWebAsync("http://www.ssps.cz/pages/rozvrhy/", Encoding.GetEncoding("windows-1250"));
             // Get into neareast node to all data
             var mainData = doc.DocumentNode.ChildNodes["html"].ChildNodes["body"].ChildNodes["table"]
@@ -35,6 +37,7 @@ namespace SSPS.BO
                 }
                 active.SupplementationNodes.Add(item);
             }
+
             if (active != null)
                 parsedData.Add(active);
             var result = new List<SchoolClass>();
@@ -83,7 +86,15 @@ namespace SSPS.BO
 }
 static class Extensions
 {
-    public static HtmlAgilityPack.HtmlNode GetNode(this HtmlAgilityPack.HtmlNode node, string name, int count)
+    /// <summary>
+    /// Get <see cref="HtmlNode"/>
+    /// </summary>
+    /// <param name="node">Current node</param>
+    /// <param name="name">Name of element</param>
+    /// <param name="count">Element for which we are looking</param>
+    /// <returns>Selected node</returns>
+    /// <exception cref="IndexOutOfRangeException">When is <paramref name="count"/> out of range</exception>
+    public static HtmlNode GetNode(this HtmlNode node, string name, int count)
     {
         return node.ChildNodes.Where(x => x.Name == name).ToArray()[count-1];
     }
