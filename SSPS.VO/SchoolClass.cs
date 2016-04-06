@@ -26,6 +26,8 @@ namespace SSPS.VO
         [DataMember]
         public List<Supplementation> Supplementations { get; set; }
 
+        public SchoolClass() { }
+
         public SchoolClass(string Name)
         {
             this.Name = Name;
