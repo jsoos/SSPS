@@ -29,7 +29,7 @@ namespace SSPS.UWP.ViewModels
         }
 
         ObservableCollection<SupplementationViewModel> supplementation = new ObservableCollection<SupplementationViewModel>();
-        public ObservableCollection<SupplementationViewModel> Supplementation
+        public ObservableCollection<SupplementationViewModel> Supplementations
         {
             get { return supplementation; }
             set { SetProperty(ref supplementation, value); }

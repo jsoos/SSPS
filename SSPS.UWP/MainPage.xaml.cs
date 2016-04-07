@@ -12,6 +12,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using SSPS.UWP.ViewModels;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -25,6 +26,26 @@ namespace SSPS.UWP
         public MainPage()
         {
             this.InitializeComponent();
+            School = new SchoolViewModel("SSPŠ");
+        }
+
+        internal SchoolViewModel School { get; set; }
+        internal SchoolClassViewModel SelectedClass
+        {
+            get
+            {
+                return School?.SelectedSchoolClass;
+            }
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Page_SizeChanged(object sender, SizeChangedEventArgs e)
+        {
+            //SchoolList.Height = grdMain.Height;
         }
     }
 }
