@@ -23,6 +23,18 @@ namespace SSPS.UWP.ViewModels
             set { SetProperty(This.To, value, () => This.To = value); }
         }
 
+        public string DateRange
+        {
+            get
+            {
+                if (To == From)
+                    return From.ToString("dd/MM");
+                if (To.Year == From.Year)
+                    return From.ToString("dd/MM") + " - " + To.ToString("dd/MM");
+                return From.ToString("dd/MM/yyyy") + " - " + To.ToString("dd/MM/yyyy");
+            }
+        }
+
         public DateTime Updated
         {
             get { return This.Updated; }

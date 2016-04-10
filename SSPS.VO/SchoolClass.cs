@@ -44,17 +44,17 @@ namespace SSPS.VO
         /// <returns>All posible classes</returns>
         public static List<SchoolClass> GetAllClasses()
         {
-            var ret = new List<SchoolClass>(17);
-            ret.Add(new SchoolClass("ALL"));
+            var res = new List<SchoolClass>(17);
+            //ret.Add(new SchoolClass("ALL"));
             for (int i = 1; i < 5; i++)
             {
-                ret.Add(new SchoolClass($"{i}.A"));
-                ret.Add(new SchoolClass($"{i}.B"));
-                ret.Add(new SchoolClass($"{i}.C"));
-                ret.Add(new SchoolClass($"{i}.D"));
-                ret.Add(new SchoolClass($"{i}.L"));
+                res.Add(new SchoolClass($"{i}.A"));
+                res.Add(new SchoolClass($"{i}.B"));
+                res.Add(new SchoolClass($"{i}.C"));
+                res.Add(new SchoolClass($"{i}.D"));
+                res.Add(new SchoolClass($"{i}.L"));
             }
-            return ret;
+            return res;
         }
     }
 }

@@ -39,15 +39,15 @@ namespace SSPS.BO
         {
             var schoolClasses = SchoolClass.GetAllClasses();
 
-            Updated.IsDaylightSavingTime();
-
             foreach (var item in this.SupplementationNodes)
             {
                 if (item.Attributes["CLASS"].Value.Contains("b"))
                 {
                     foreach (var @class in schoolClasses)
-                        @class.Supplementations.Add(new Supplementation() { Message = item.InnerText.Trim(), From = DateFrom, To = DateTo, Updated = Updated });
-
+                    {
+                        var supplementation = new Supplementation() { Message = item.InnerText.Trim(), From = DateFrom, To = DateTo, Updated = Updated };
+                        @class.Supplementations.Add(supplementation);
+                    }
                     continue;
                 }
                 var nodeWithChanges = item.ChildNodes["UL"];

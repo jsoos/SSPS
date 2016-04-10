@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<school name="SSPS">
+    <subjects>
+        <subject id="1" name="WBA" teacher="Cp" />
+        <subject id="2" name="WBA" teacher="Kl" />
+        <subject id="3" name="VYT" teacher="Vd" />
+        <subject id="4" name="" teacher="" />
+        <subject id="5" name="PVA" teacher="Kf" />
+        <subject id="6" name="PVA" teacher="Br" />
+        <subject id="7" name="PSI" teacher="Kk" />
+        <subject id="8" name="PSI" teacher="Hj" />
+        <subject id="9" name="CJL" teacher="Lp" />
+        <subject id="10" name="FYZ" teacher="Ma" />
+        <subject id="11" name="NEM" teacher="Mu" />
+        <subject id="12" name="NEM" teacher="Su" />
+        <subject id="13" name="DEJ" teacher="Ka" />
+        <subject id="14" name="MAT" teacher="Zý" />
+        <subject id="15" name="HAR" teacher="Lo" />
+        <subject id="16" name="ANG" teacher="Dá" />
+        <subject id="17" name="ANG" teacher="Kg" />
+        <subject id="18" name="TEV" teacher="Pn" />
+        <subject id="19" name="TV2" teacher="Kr" />
+        <subject id="20" name="GRS" teacher="Vb" />
+        <subject id="21" name="GRS" teacher="Tr" />
+        <subject id="22" name="PCV" teacher="Ar" />
+        <subject id="23" name="PCV" teacher="Pa" />
+        <subject id="24" name="PCV" teacher="Ke" />
+        <subject id="25" name="HAC" teacher="Lo" />
+        <subject id="26" name="ONA" teacher="Ji" />
+    </subjects>
+    <classes>
+        <class name="2.A">
+            <timetable days="5">
+                <day type="monday" hours="7">
+                    <hour subject-id="1"    hour="1"/>
+                    <hour subject-id="3"    hour="1"/>
+                    <hour subject-id="1"    hour="2"/>
+                    <hour subject-id="3"    hour="2"/>
+                    <hour subject-id="5"    hour="3"/>
+                    <hour subject-id="7"    hour="3"/>
+                    <hour subject-id="5"    hour="4"/>
+                    <hour subject-id="7"    hour="4"/>
+                    <hour subject-id="16"   hour="5"/>
+                    <hour subject-id="17"   hour="5"/>
+                    <hour subject-id="9"    hour="6"/>
+                    <hour subject-id="10"   hour="7"/>
+                </day>
+                <day type="tuesday" hours="6">
+                    <hour subject-id="11"   hour="1"/>
+                    <hour subject-id="12"   hour="1"/>
+                    <hour subject-id="9"    hour="2"/>
+                    <hour subject-id="2"    hour="3"/>
+                    <hour subject-id="3"    hour="3"/>
+                    <hour subject-id="2"    hour="4"/>
+                    <hour subject-id="3"    hour="4"/>
+                    <hour subject-id="13"   hour="5"/>
+                    <hour subject-id="14"   hour="6"/>
+                </day>
+                <day type="wensday" hours="7">
+                    <hour subject-id="14"   hour="1"/>
+                    <hour subject-id="14"   hour="2"/>
+                    <hour subject-id="15"   hour="3"/>
+                    <hour subject-id="16"   hour="4"/>
+                    <hour subject-id="17"   hour="4"/>
+                    <hour subject-id="18"   hour="5"/>
+                    <hour subject-id="19"   hour="5"/>
+                    <hour subject-id="18"   hour="6"/>
+                    <hour subject-id="19"   hour="6"/>
+                    <hour subject-id="11"   hour="7"/>
+                    <hour subject-id="12"   hour="7"/>
+                </day>
+                <day type="thursday" hour="10">
+                    <hour subject-id="10"   hour="1"/>
+                    <hour subject-id="14"   hour="2"/>
+                    <hour subject-id="20"   hour="3"/>
+                    <hour subject-id="21"   hour="3"/>
+                    <hour subject-id="20"   hour="4"/>
+                    <hour subject-id="21"   hour="4"/>
+                    <hour subject-id="22"   hour="5"/>
+                    <hour subject-id="23"   hour="5"/>
+                    <hour subject-id="24"   hour="5"/>
+                    <hour subject-id="22"   hour="6"/>
+                    <hour subject-id="23"   hour="6"/>
+                    <hour subject-id="24"   hour="6"/>
+                    <hour subject-id="22"   hour="7"/>
+                    <hour subject-id="23"   hour="7"/>
+                    <hour subject-id="24"   hour="7"/>
+                    <hour subject-id="4"    hour="8"/>
+                    <hour subject-id="7"    hour="9"/>
+                    <hour subject-id="6"    hour="9"/>
+                    <hour subject-id="7"    hour="10"/>
+                    <hour subject-id="6"    hour="10"/>
+                </day>
+                <day type="friday" hour="6">
+                    <hour subject-id="25" hour="1"/>
+                    <hour subject-id="25" hour="2"/>
+                    <hour subject-id="16" hour="3"/>
+                    <hour subject-id="17" hour="3"/>
+                    <hour subject-id="26" hour="4"/>
+                    <hour subject-id="15" hour="5"/>
+                    <hour subject-id="9" hour="6"/>
+                </day>
+            </timetable>
+        </class>
+    </classes>
+</school>

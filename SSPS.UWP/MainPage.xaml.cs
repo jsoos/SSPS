@@ -30,22 +30,5 @@ namespace SSPS.UWP
         }
 
         internal SchoolViewModel School { get; set; }
-        internal SchoolClassViewModel SelectedClass
-        {
-            get
-            {
-                return School?.SelectedSchoolClass;
-            }
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void Page_SizeChanged(object sender, SizeChangedEventArgs e)
-        {
-            //SchoolList.Height = grdMain.Height;
-        }
     }
 }

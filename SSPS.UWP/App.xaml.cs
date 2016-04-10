@@ -30,6 +30,7 @@ namespace SSPS.UWP
         {
             this.InitializeComponent();
             this.Suspending += OnSuspending;
+               
         }
 
         /// <summary>
@@ -44,7 +45,7 @@ namespace SSPS.UWP
 #if DEBUG
             if (System.Diagnostics.Debugger.IsAttached)
             {
-                this.DebugSettings.EnableFrameRateCounter = true;
+                this.DebugSettings.EnableFrameRateCounter = false;
             }
 #endif
 
