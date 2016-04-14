@@ -53,7 +53,7 @@ namespace SSPS.BO
                 var nodeWithChanges = item.ChildNodes["UL"];
                 foreach (var change in nodeWithChanges.ChildNodes.Where(x => !string.IsNullOrEmpty(x.InnerText.Trim())))
                 {
-                    foreach (var @class in schoolClasses.Where(x => change.InnerText.Contains(x.Name) || change.InnerText.Contains($"{x.Year}.r")))
+                    foreach (var @class in schoolClasses.Where(x => change.InnerText.Contains(x.Name) || change.InnerText.Contains(string.Format("{0}.r", x.Year))))
                     {
                         @class.Supplementations.Add(new Supplementation() { Message = change.InnerText.Trim(), From = DateFrom, To = DateTo, Updated = Updated });
                     }

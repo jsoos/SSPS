@@ -15,6 +15,7 @@ namespace SSPS.WinForm
         public frmMain()
         {
             InitializeComponent();
+            SSPS.BO.SchoolClassBO.List();
         }
     }
 }

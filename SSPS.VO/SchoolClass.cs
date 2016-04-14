@@ -48,11 +48,11 @@ namespace SSPS.VO
             //ret.Add(new SchoolClass("ALL"));
             for (int i = 1; i < 5; i++)
             {
-                res.Add(new SchoolClass($"{i}.A"));
-                res.Add(new SchoolClass($"{i}.B"));
-                res.Add(new SchoolClass($"{i}.C"));
-                res.Add(new SchoolClass($"{i}.D"));
-                res.Add(new SchoolClass($"{i}.L"));
+                res.Add(new SchoolClass(string.Format("{0}.A", i)));
+                res.Add(new SchoolClass(string.Format("{0}.B", i)));
+                res.Add(new SchoolClass(string.Format("{0}.V", i)));
+                res.Add(new SchoolClass(string.Format("{0}.F", i)));
+                res.Add(new SchoolClass(string.Format("{0}.L", i)));
             }
             return res;
         }

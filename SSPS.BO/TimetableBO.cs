@@ -47,7 +47,7 @@ namespace SSPS.BO
             foreach (var @class in doc.Element("school").Element("classes").Elements("class"))
             {
                 var timetableNode = @class.Element("timetable");
-                var timetable = new Timetable(@class.FirstAttribute.Value);
+                var timetable2 = new Timetable(@class.FirstAttribute.Value);
                 foreach (var dayNode in timetableNode.Elements())
                 {
                     Day day = new Day();
@@ -60,9 +60,9 @@ namespace SSPS.BO
                         subject.Hour = int.Parse(subjectNode.LastAttribute.Value);
                         day.Subjects.Add(subject);
                     }
-                timetable.Days.Add(day);
+                timetable2.Days.Add(day);
                 }
-                TimetableBO.timetable.Add(timetable);
+                TimetableBO.timetable.Add(timetable2);
             }
 
             return timetable.Find(x=>x.SchoolClass.Name == className);
